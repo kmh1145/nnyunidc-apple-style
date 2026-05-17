@@ -1,0 +1,210 @@
+export const COLORS = {
+  primary: "#0066cc",
+  primaryFocus: "#0071e3",
+  primaryOnDark: "#2997ff",
+  ink: "#1d1d1f",
+  inkMuted80: "#333333",
+  inkMuted48: "#7a7a7a",
+  canvas: "#ffffff",
+  canvasParchment: "#f5f5f7",
+  surfacePearl: "#fafafc",
+  surfaceTile1: "#272729",
+  surfaceTile2: "#2a2a2c",
+  surfaceTile3: "#252527",
+  surfaceBlack: "#000000",
+  onDark: "#ffffff",
+  onPrimary: "#ffffff",
+  bodyMuted: "#cccccc",
+  hairline: "#e0e0e0",
+  dividerSoft: "#f0f0f0",
+} as const;
+
+export const NAV_LINKS = [
+  "VPS",
+  "独立服务器",
+  "存储服务器",
+  "控制台",
+  "解决方案",
+  "技术支持",
+  "关于我们",
+];
+
+export const SERVER_PRODUCTS = [
+  {
+    id: "rack-x1",
+    name: "机架式服务器 X1",
+    tagline: "性能密度，重新定义。",
+    description:
+      "2U 机架式强大算力，为数据中心工作负载提供卓越的计算密度。",
+    price: "¥89,999",
+    svgType: "rack" as const,
+    tileVariant: "dark" as const,
+    href: "/dedicated",
+  },
+  {
+    id: "blade-b8",
+    name: "刀片式服务器 B8",
+    tagline: "无妥协的扩展。",
+    description:
+      "超高密度刀片机箱，8 个独立节点，每机架单元最大吞吐量。",
+    price: "¥169,999",
+    svgType: "blade" as const,
+    tileVariant: "light" as const,
+    href: "/dedicated",
+  },
+  {
+    id: "gpu-g4",
+    name: "GPU 服务器 G4",
+    tagline: "加速智能。",
+    description:
+      "4 GPU 计算平台，专为 AI 训练、推理和高性能计算而设计。",
+    price: "¥249,999",
+    svgType: "gpu" as const,
+    tileVariant: "dark2" as const,
+    href: "/dedicated",
+  },
+  {
+    id: "tower-t2",
+    name: "塔式服务器 T2",
+    tagline: "静音动力，无处不在。",
+    description:
+      "超静音塔式架构，适用于边缘计算、分支机构和远程部署。",
+    price: "¥59,999",
+    svgType: "tower" as const,
+    tileVariant: "light" as const,
+    href: "/dedicated",
+  },
+];
+
+export const STORE_CARDS = [
+  {
+    name: "机架式 X1 — 基础版",
+    spec: "2× Xeon 6, 64GB ECC, 2× 1TB NVMe",
+    price: "¥89,999",
+    svgType: "rack" as const,
+    href: "/dedicated",
+  },
+  {
+    name: "机架式 X1 — 专业版",
+    spec: "2× Xeon 6, 128GB ECC, 4× 2TB NVMe",
+    price: "¥139,999",
+    svgType: "rack" as const,
+    href: "/dedicated",
+  },
+  {
+    name: "刀片式 B8 — 入门版",
+    spec: "4 节点, 每节点 2× Xeon 6, 64GB",
+    price: "¥169,999",
+    svgType: "blade" as const,
+    href: "/dedicated",
+  },
+  {
+    name: "刀片式 B8 — 满配版",
+    spec: "8 节点, 每节点 2× Xeon 6, 128GB",
+    price: "¥329,999",
+    svgType: "blade" as const,
+    href: "/dedicated",
+  },
+  {
+    name: "GPU G4 — 标准版",
+    spec: "2× Xeon 6, 256GB, 4× A100 80GB",
+    price: "¥249,999",
+    svgType: "gpu" as const,
+    href: "/dedicated",
+  },
+  {
+    name: "GPU G4 — 旗舰版",
+    spec: "2× Xeon 6, 512GB, 4× H100 80GB",
+    price: "¥449,999",
+    svgType: "gpu" as const,
+    href: "/dedicated",
+  },
+  {
+    name: "塔式 T2 — 边缘版",
+    spec: "1× Xeon 6, 32GB, 1× 1TB NVMe",
+    price: "¥59,999",
+    svgType: "tower" as const,
+    href: "/dedicated",
+  },
+  {
+    name: "塔式 T2 — 分支版",
+    spec: "1× Xeon 6, 64GB, 2× 2TB NVMe",
+    price: "¥89,999",
+    svgType: "tower" as const,
+    href: "/dedicated",
+  },
+];
+
+export const SPECS = [
+  {
+    label: "机架式 X1",
+    processor: "2× Intel Xeon 6 (128 核)",
+    memory: "最高 1TB DDR5 ECC",
+    storage: "8× NVMe U.2 (最高 64TB)",
+    networking: "2× 100GbE + 2× 25GbE",
+    gpu: "2× PCIe 5.0 x16 插槽",
+    power: "2× 1600W 冗余",
+  },
+  {
+    label: "刀片式 B8",
+    processor: "每节点 2× Intel Xeon 6",
+    memory: "每节点最高 256GB DDR5",
+    storage: "每节点 2× NVMe",
+    networking: "双 100GbE 互联",
+    gpu: "每节点 1× GPU",
+    power: "6× 3000W 共享",
+  },
+  {
+    label: "GPU G4",
+    processor: "2× Intel Xeon 6 (128 核)",
+    memory: "最高 1TB DDR5 ECC",
+    storage: "8× NVMe U.2 (最高 64TB)",
+    networking: "4× 400GbE InfiniBand",
+    gpu: "4× NVIDIA H100 80GB",
+    power: "4× 3000W 冗余",
+  },
+  {
+    label: "塔式 T2",
+    processor: "1× Intel Xeon 6 (64 核)",
+    memory: "最高 256GB DDR5 ECC",
+    storage: "4× NVMe (最高 16TB)",
+    networking: "2× 25GbE",
+    gpu: "1× PCIe 5.0 x16 插槽",
+    power: "1× 850W",
+  },
+];
+
+export const FOOTER_LINKS = {
+  products: [
+    "机架式服务器",
+    "刀片式服务器",
+    "GPU 服务器",
+    "塔式服务器",
+    "存储解决方案",
+    "网络设备",
+  ],
+  solutions: [
+    "AI 与机器学习",
+    "云基础设施",
+    "边缘计算",
+    "高性能计算",
+    "虚拟化",
+    "数据库",
+  ],
+  support: [
+    "技术支持",
+    "产品文档",
+    "保修服务",
+    "维修服务",
+    "培训课程",
+    "联系销售",
+  ],
+  company: [
+    "关于我们",
+    "加入我们",
+    "投资者关系",
+    "可持续发展",
+    "隐私政策",
+    "使用条款",
+  ],
+};
